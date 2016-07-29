@@ -25,7 +25,7 @@ RApi::setConfig(array(
 *get*,*post*,*put*,*delete*
 
 ######Funções disponíveis
-*fields()*,*header()*,*cookie*,*run()*
+*fields(array $fields)*,*header(array $headers)*,*cookie(string $cookie)*,*run()*
 
 ######GET
 ```php
@@ -33,11 +33,20 @@ RApi::setConfig(array(
 
 RApi::get('/')->run();
 
-//Passando parâmetros
-$res = RApi::get('/')->fields(['user'=>'test','pass'=>'***'])->run();
+//Passando parâmetros, o retorno será um objeto
+$res = RApi::get('/')
+       ->fields(['user'=>'test','pass'=>'***'])
+       ->run();
 
-print $res->response;
-
+//Passando parâmetros e informado headers, o retorno será um objeto
+$res = RApi::get('/')
+       ->fields(['user'=>'test','pass'=>'***'])
+       ->header(['Content-Type: application/json', 'Accept: application/json'])
+       ->run();       
+#output
+$res->response; // Resultado da consulta
+$res->info;     // array com informações da requisição
+$res->header;   // array com header do resultado da consulta
 ```
 
 ##Testes
