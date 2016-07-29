@@ -40,7 +40,7 @@ print $res->response;
 
 ```
 
-##Tests
+##Testes
 Instale o [composer](https://getcomposer.org)
 ```sh
 //Instalando as dependências necessárias
