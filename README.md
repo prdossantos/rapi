@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/prdossantos/rapi.svg?branch=master)](https://travis-ci.org/prdossantos/rapi)
 # RApi
 Cliente PHP para API REST
 
