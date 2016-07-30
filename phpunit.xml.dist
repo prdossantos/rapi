@@ -1,0 +1,17 @@
+<phpunit
+  colors="true"
+  verbose="true"
+  bootstrap="tests/bootstrap.php">
+  <testsuites>
+    <testsuite name="RApi">
+        <directory>tests</directory>
+    </testsuite>
+  </testsuites>
+
+  <filter>
+    <whitelist>
+      <directory>src</directory>
+    </whitelist>
+  </filter>
+
+</phpunit>
