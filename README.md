@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/prdossantos/rapi.svg?branch=master)](https://travis-ci.org/prdossantos/rapi)
 # RApi
-Cliente PHP para API REST
+Cliente PHP para API REST, uma maneira simples e rápida de comunicar sua aplicação PHP com outras APIs. Esta biblioteca utiliza a extensão cURL.
 
 ## Instalação
 Clone ou baixe o repositório.
