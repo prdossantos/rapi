@@ -29,7 +29,7 @@ RApi::setConfig(array(
 
 ######GET
 ```php
-//Todas as requisições devem conter uma chamada a função \*run()\*
+//Todas as requisições devem conter uma chamada a função *run()*
 
 RApi::get('/')->run();
 
