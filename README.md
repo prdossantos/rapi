@@ -22,14 +22,14 @@ RApi::setConfig(array(
 ));
 ```
 ######Métodos disponíveis
-*get*,*post*,*put*,*delete*
+*get*, *post*, *put*, *delete*
 
 ######Funções disponíveis
-*fields(array $fields)*,*header(array $headers)*,*cookie(string $cookie)*,*run()*
+*fields(array $fields)*, *header(array $headers)*, *cookie(string $cookie)*, *run()*
 
 ######GET
 ```php
-//Todas as requisições devem conter uma chamada a função *run()*
+//Todas as requisições devem conter uma chamada a função \*run()\*
 
 RApi::get('/')->run();
 
