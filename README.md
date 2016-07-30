@@ -1,17 +1,15 @@
 # RApi
 Cliente PHP para API REST
 
-##Instalação
+## Instalação
 Clone ou baixe o repositório.
 
-##Exemplos
-#####Instanciando a classe
+## Exemplos
+##### Instanciando a classe
 ```php
 use App\RApi;
 ```
-##Métodos
-
-######Configurações
+###### Configurações
 ```php
 RApi::setConfig('host','http://api.domain.com');
 
@@ -21,15 +19,9 @@ RApi::setConfig(array(
 	'ssl' => 'cert.pem'
 ));
 ```
-######Métodos disponíveis
-*get*, *post*, *put*, *delete*
-
-######Funções disponíveis
-*fields(array $fields)*, *header(array $headers)*, *cookie(string $cookie)*, *run()*
-
-######GET
+###### GET
 ```php
-//Todas as requisições devem conter uma chamada a função *run()*
+//Todas as requisições devem conter uma chamada a função run()
 
 RApi::get('/')->run();
 
@@ -48,6 +40,17 @@ $res->response; // Resultado da consulta
 $res->info;     // array com informações da requisição
 $res->header;   // array com header do resultado da consulta
 ```
+## Métodos disponíveis
+* get 
+* post 
+* put 
+* delete
+
+## Funções disponíveis
+* fields(array $fields) 
+* header(array $headers) 
+* cookie(string $cookie) 
+* run()
 
 ##Testes
 Instale o [composer](https://getcomposer.org)
