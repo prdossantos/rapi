@@ -1,7 +1,7 @@
 <?php
 namespace App;
 
-use RemoteAPI\RemoteAPI;
+use App\RemoteAPI\RemoteAPI;
 
 class RApi {
 	

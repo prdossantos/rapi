@@ -1,6 +1,6 @@
 <?php
 
-namespace RemoteAPI;
+namespace App\RemoteAPI;
 
 /**
  * Conexão remova via cURL
