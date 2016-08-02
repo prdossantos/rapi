@@ -20,9 +20,13 @@ class RemoteAPI {
         $this->debug = $debug;
     }
 
-    public function fields($fields='',$formData=false)
+    public function fields($fields='',$formData=null)
     {
         $this->options['formData'] = $formData;
+
+        if( is_null($formData) )
+            if( $this->options['method'] != 'GET') $this->options['formData'] = true;
+            else $this->options['formData'] = false;
 
         if( $fields )
             $this->options['fields'] = $fields;
