@@ -54,8 +54,10 @@ class RApi {
 				self::$store[$k] = $value;	
 			}
 		} else {
-			if( $key == 'header' && !is_array($value) ) $value = [$value];
-				self::$store[$key] = $value;
+			if( $key == 'header' && !is_array($value) ) 
+                $value = [$value];
+				
+            self::$store[$key] = $value;
 		}
 		
 	}
