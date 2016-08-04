@@ -14,7 +14,7 @@ class RApi {
         $api = new RemoteAPI($host,self::$debug);
         $api->method($method);
         if($fields || $header){
-            $api->fields($fields);
+            $api->fields($fields,( $method != 'GET' ? true : false));
             $api->header($header);
             return $api->run();
         }

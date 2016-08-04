@@ -22,7 +22,7 @@ class RemoteAPI {
 
     public function fields($fields='',$formData=null)
     {
-        $this->options['formData'] = $formData;
+        $this->options['formData'] = ( is_bool($formData) ) ? $formData : ($this->options['method'] != 'GET' ? true : false );
 
         if( is_null($formData) )
             if( $this->options['method'] != 'GET') $this->options['formData'] = true;
