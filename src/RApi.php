@@ -8,39 +8,44 @@ class RApi {
 	private static $store;
 	public static $debug = false;
 
-	public static function init($path,$method)
-	{
-		$host = (self::getConfig('host')) ? self::getConfig('host').'/'.ltrim($path,'/') : $path;
-		$api = new RemoteAPI($host,self::$debug);
-		$api->method($method);
+	public static function init($path,$method,$fields=array(),$header=array())
+    {
+        $host = (self::getConfig('host')) ? self::getConfig('host').'/'.ltrim($path,'/') : $path;
+        $api = new RemoteAPI($host,self::$debug);
+        $api->method($method);
+        if($fields || $header){
+            $api->fields($fields);
+            $api->header($header);
+            return $api->run();
+        }
 
-		return $api;
-	}
+        return $api;
+    }
 
-	public static function get($path='/') 
-	{
-		return self::init($path,'GET');
-	}
+    public static function get($path='/',$fields=array(),$header=array()) 
+    {
+        return self::init($path,'GET',$fields,$header);
+    }
 
-	public static function post($path='/') 
-	{
-		return self::init($path,'POST');
-	}
+    public static function post($path='/',$fields=array(),$header=array()) 
+    {
+        return self::init($path,'POST',$fields,$heade);
+    }
 
-	public static function put($path='/') 
-	{
-		return self::init($path,'PUT');
-	}
+    public static function put($path='/',$fields=array(),$header=array()) 
+    {
+        return self::init($path,'PUT',$fields,$heade);
+    }
 
-	public static function delete($path='/') 
-	{
-		return self::init($path,'DELETE');
-	}
+    public static function delete($path='/',$fields=array(),$header=array())
+    {
+        return self::init($path,'DELETE',$fields,$heade);
+    }
 
-	public static function patch($path='/') 
-	{
-		return self::init($path,'PATCH');
-	}
+    public static function patch($path='/',$fields=array(),$header=array())
+    {
+        return self::init($path,'PATCH',$fields,$heade);
+    }
 
 	public static function setConfig($key,$value='')
 	{
