@@ -29,22 +29,22 @@ class RApi {
 
     public static function post($path='/',$fields=array(),$header=array()) 
     {
-        return self::init($path,'POST',$fields,$heade);
+        return self::init($path,'POST',$fields,$header);
     }
 
     public static function put($path='/',$fields=array(),$header=array()) 
     {
-        return self::init($path,'PUT',$fields,$heade);
+        return self::init($path,'PUT',$fields,$header);
     }
 
     public static function delete($path='/',$fields=array(),$header=array())
     {
-        return self::init($path,'DELETE',$fields,$heade);
+        return self::init($path,'DELETE',$fields,$header);
     }
 
     public static function patch($path='/',$fields=array(),$header=array())
     {
-        return self::init($path,'PATCH',$fields,$heade);
+        return self::init($path,'PATCH',$fields,$header);
     }
 
 	public static function setConfig($key,$value='')
