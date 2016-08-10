@@ -35,7 +35,11 @@ $res = RApi::get('/')
 $res = RApi::get('/')
        ->fields(['user'=>'test','pass'=>'***'])
        ->header(['Content-Type: application/json', 'Accept: application/json'])
-       ->run();       
+       ->run(); 
+
+//Podemos passar parâmetros e headers no método, simplificando as coisas.
+$res = RApi::post('http://api.domain.com/auth',['username'=>'asdf','password'=>'***'],['Content-Type: application/json']);
+
 #output
 $res->response; // Resultado da consulta
 $res->info;     // array com informações da requisição
