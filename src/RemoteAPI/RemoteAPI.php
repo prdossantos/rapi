@@ -93,7 +93,7 @@ class RemoteAPI {
         if ( isset($this->options['header']) )
             curl_setopt($curl, CURLOPT_HTTPHEADER, $this->options['header']);
 
-        if ( isset($this->options['fields']) && $this->options['formData'])
+        if ( isset($this->options['fields']) && $this->options['formData'] && $this->options['fields'])
             curl_setopt($curl, CURLOPT_POSTFIELDS, $this->options['fields']);
 
         if ( isset($this->options['auth']) )
