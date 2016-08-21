@@ -3,8 +3,9 @@
 Cliente PHP para API REST, uma maneira simples e rápida de comunicar sua aplicação PHP com outras APIs. Esta biblioteca utiliza a extensão cURL.
 
 ## Instalação
-Clone ou baixe o repositório.
-
+```sh
+composer require prdossantos/rapi:v1.0.2beta
+```
 ## Exemplos
 ##### Instanciando a classe
 ```php
