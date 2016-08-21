@@ -1,5 +1,5 @@
 {
-    "name": "prdossantos/remote-api",
+    "name": "prdossantos/rapi",
     "description": "Api para acesso remoto via cURL",
     "license": "MIT",
     "authors": [
