@@ -113,9 +113,11 @@ class RemoteAPI {
         
         $this->info = curl_getinfo($curl);
 
-        $this->header = $this->parseHeader(explode("\r\n", $response));
-            
         $http_message = (curl_error($curl)) ? curl_error($curl) : null;
+
+        curl_close($curl);
+
+        $this->header = $this->parseHeader(explode("\r\n", $response));
 
         if( isset($this->header['Status']) )
             $http_message = $this->header['Status'];
@@ -156,11 +158,11 @@ class RemoteAPI {
     protected function buildQuery($fields)
     {
         if( $fields && is_array($fields) ) {
-            $query='';
+            $query='?';
             foreach ($fields as $key => $value) {
-                $query .= $key.'='.$value;
+                $query .= '&'.$key.'='.$value;
             }
-            return $query;
+            return str_replace('?&','',$query);
         } else if(is_string($fields) ){
             return $fields;
         } else {
